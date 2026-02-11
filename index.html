@@ -433,6 +433,337 @@
             text-decoration: none;
         }
         
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .gallery-item {
+            background: var(--color-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-image {
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .gallery-info {
+            padding: 24px;
+        }
+        
+        .gallery-info h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .gallery-info p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Calculator Section */
+        .calculator {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--color-bg) 0%, #e8e8e8 100%);
+        }
+        
+        .section-label {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .calculator-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius);
+            padding: 48px;
+            box-shadow: var(--shadow);
+        }
+        
+        .calc-step {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        .calc-step.active {
+            display: block;
+        }
+        
+        .calc-step h3 {
+            text-align: center;
+            margin-bottom: 32px;
+            font-size: 24px;
+        }
+        
+        .calc-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .calc-options--vertical {
+            grid-template-columns: 1fr;
+        }
+        
+        .calc-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 28px 20px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .calc-option:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+        
+        .calc-option.selected {
+            border-color: var(--color-accent);
+            background: #fff5f5;
+            box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.1);
+        }
+        
+        .calc-option i {
+            font-size: 40px;
+            color: var(--color-primary);
+        }
+        
+        .calc-option.selected i {
+            color: var(--color-accent);
+        }
+        
+        .calc-option--large {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+            padding: 24px;
+        }
+        
+        .calc-option-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        
+        .calc-option-desc {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .calc-option-price {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--color-accent);
+            white-space: nowrap;
+        }
+        
+        .calc-range {
+            padding: 24px 0;
+        }
+        
+        .calc-range input[type="range"] {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: #e0e0e0;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .calc-range input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--color-accent);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(233, 69, 96, 0.4);
+        }
+        
+        .calc-range-value {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-top: 16px;
+        }
+        
+        .calc-nav {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 32px;
+        }
+        
+        .calc-progress {
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            margin-top: 32px;
+            overflow: hidden;
+        }
+        
+        .calc-progress-bar {
+            height: 100%;
+            background: var(--color-accent);
+            border-radius: 2px;
+            transition: width 0.4s ease;
+            width: 20%;
+        }
+        
+        /* Calculator Result */
+        .calc-result {
+            text-align: center;
+        }
+        
+        .calc-result h3 {
+            margin-bottom: 16px;
+        }
+        
+        .calc-result-price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--color-accent);
+            margin-bottom: 8px;
+        }
+        
+        .calc-result-note {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 32px;
+        }
+        
+        .calc-result-details {
+            background: var(--color-bg);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+        
+        .calc-detail {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .calc-detail:last-child {
+            border-bottom: none;
+        }
+        
+        .calc-detail span:first-child {
+            color: #666;
+        }
+        
+        .calc-detail span:last-child {
+            font-weight: 600;
+        }
+        
+        /* Lead Form */
+        .lead-form-wrapper {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #16213e 100%);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 24px;
+            color: white;
+        }
+        
+        .lead-form-wrapper h4 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        
+        .lead-form-wrapper > p {
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+        
+        .lead-form .form-group {
+            margin-bottom: 16px;
+        }
+        
+        .lead-form input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: var(--radius);
+            font-size: 15px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .lead-form input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .lead-form input:focus {
+            border-color: var(--color-gold);
+            outline: none;
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .lead-form-alt {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .lead-form-alt span {
+            display: block;
+            margin-bottom: 12px;
+            opacity: 0.8;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         /* Mobile */
         @media (max-width: 768px) {
             .hero-features {
@@ -446,6 +777,23 @@
             
             .stats-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .calculator-wrapper {
+                padding: 28px;
+            }
+            
+            .calc-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .calc-option--large {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -695,6 +1043,224 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Доставленные автомобили</h2>
+                <p>Реальные фото авто, которые мы привезли для наших клиентов</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">[Фото 1: Toyota Prado во Владивостоке]</div>
+                    <div class="gallery-info">
+                        <h4>Toyota Land Cruiser Prado</h4>
+                        <p>2022 г. • Доставлен в Якутск</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">[Фото 2: Honda CR-V на пароме]</div>
+                    <div class="gallery-info">
+                        <h4>Honda CR-V</h4>
+                        <p>2021 г. • Доставлен в Якутск</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">[Фото 3: Tank 300 у клиента]</div>
+                    <div class="gallery-info">
+                        <h4>Tank 300</h4>
+                        <p>2024 г. • Доставлен в Якутск</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">[Фото 4: Toyota Harrier в порту]</div>
+                    <div class="gallery-info">
+                        <h4>Toyota Harrier</h4>
+                        <p>2023 г. • Доставлен в Якутск</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">[Фото 5: Geely Tugella]</div>
+                    <div class="gallery-info">
+                        <h4>Geely Tugella</h4>
+                        <p>2023 г. • Доставлен в Якутск</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">[Фото 6: Omoda C5]</div>
+                    <div class="gallery-info">
+                        <h4>Omoda C5</h4>
+                        <p>2024 г. • Доставлен в Якутск</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Quiz Section (for Yandex Direct) -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Калькулятор стоимости</span>
+                <h2>Рассчитайте стоимость авто за 2 минуты</h2>
+                <p>Получите предварительный расчёт с учётом доставки и таможни</p>
+            </div>
+            
+            <div class="calculator-wrapper">
+                <!-- Step 1: Country -->
+                <div class="calc-step active" data-step="1">
+                    <h3>1. Откуда везём автомобиль?</h3>
+                    <div class="calc-options">
+                        <button class="calc-option" data-value="japan" data-price="1">
+                            <i class="ph-fill ph-flag"></i>
+                            <span>Из Японии</span>
+                        </button>
+                        <button class="calc-option" data-value="china" data-price="1.1">
+                            <i class="ph-fill ph-flag"></i>
+                            <span>Из Китая</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Car Type -->
+                <div class="calc-step" data-step="2">
+                    <h3>2. Какой класс автомобиля?</h3>
+                    <div class="calc-options calc-options--vertical">
+                        <button class="calc-option calc-option--large" data-value="suv" data-price="2500000">
+                            <div class="calc-option-title">Внедорожник / Кроссовер</div>
+                            <div class="calc-option-desc">Prado, Land Cruiser, CR-V, Tank 300</div>
+                            <div class="calc-option-price">от 2 500 000 ₽</div>
+                        </button>
+                        <button class="calc-option calc-option--large" data-value="sedan" data-price="1800000">
+                            <div class="calc-option-title">Седан / Хэтчбек</div>
+                            <div class="calc-option-desc">Camry, Accord, Corolla</div>
+                            <div class="calc-option-price">от 1 800 000 ₽</div>
+                        </button>
+                        <button class="calc-option calc-option--large" data-value="minivan" data-price="2200000">
+                            <div class="calc-option-title">Минивэн / универсал</div>
+                            <div class="calc-option-desc">Alphard, Voxy, Stepwgn</div>
+                            <div class="calc-option-price">от 2 200 000 ₽</div>
+                        </button>
+                    </div>
+                    <div class="calc-nav">
+                        <button class="btn btn-secondary calc-prev">Назад</button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Year -->
+                <div class="calc-step" data-step="3">
+                    <h3>3. Год выпуска</h3>
+                    <div class="calc-range">
+                        <input type="range" id="yearRange" min="2018" max="2024" value="2021" step="1">
+                        <div class="calc-range-value">
+                            <span id="yearValue">2021</span> г.
+                        </div>
+                    </div>
+                    <div class="calc-nav">
+                        <button class="btn btn-secondary calc-prev">Назад</button>
+                        <button class="btn btn-primary calc-next">Далее</button>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Engine -->
+                <div class="calc-step" data-step="4">
+                    <h3>4. Двигатель</h3>
+                    <div class="calc-options calc-options--vertical">
+                        <button class="calc-option calc-option--large" data-value="petrol" data-price="1">
+                            <div class="calc-option-title">Бензин</div>
+                            <div class="calc-option-desc">Надёжно, доступно в Якутии</div>
+                            <div class="calc-option-price">Базовая цена</div>
+                        </button>
+                        <button class="calc-option calc-option--large" data-value="hybrid" data-price="1.15">
+                            <div class="calc-option-title">Гибрид</div>
+                            <div class="calc-option-desc">Экономично, но дороже обслуживание</div>
+                            <div class="calc-option-price">+15% к стоимости</div>
+                        </button>
+                        <button class="calc-option calc-option--large" data-value="diesel" data-price="1.1">
+                            <div class="calc-option-title">Дизель</div>
+                            <div class="calc-option-desc">Для джипов и внедорожников</div>
+                            <div class="calc-option-price">+10% к стоимости</div>
+                        </button>
+                    </div>
+                    <div class="calc-nav">
+                        <button class="btn btn-secondary calc-prev">Назад</button>
+                    </div>
+                </div>
+                
+                <!-- Step 5: Result + Lead Form -->
+                <div class="calc-step" data-step="5">
+                    <div class="calc-result">
+                        <h3>Предварительная стоимость</h3>
+                        <div class="calc-result-price">
+                            <span id="resultPrice">0</span> ₽
+                        </div>
+                        <p class="calc-result-note">* Точная стоимость после осмотра и проверки аукциона</p>
+                        
+                        <div class="calc-result-details">
+                            <div class="calc-detail">
+                                <span>Страна:</span>
+                                <span id="resultCountry">-</span>
+                            </div>
+                            <div class="calc-detail">
+                                <span>Класс:</span>
+                                <span id="resultClass">-</span>
+                            </div>
+                            <div class="calc-detail">
+                                <span>Год:</span>
+                                <span id="resultYear">-</span>
+                            </div>
+                            <div class="calc-detail">
+                                <span>Двигатель:</span>
+                                <span id="resultEngine">-</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Lead Form for Yandex Direct -->
+                        <div class="lead-form-wrapper">
+                            <h4>Получить точный расчёт</h4>
+                            <p>Оставьте номер — мы перезвоним и подберём лучшие варианты под ваш бюджет</p>
+                            
+                            <form class="lead-form" id="leadForm">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Ваше имя" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="phone" placeholder="Телефон" required>
+                                </div>
+                                <input type="hidden" name="calc-data" id="calcData">
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <i class="ph-fill ph-paper-plane-right"></i>
+                                    Получить расчёт
+                                </button>
+                            </form>
+                            
+                            <div class="lead-form-alt">
+                                <span>или</span>
+                                <a href="https://wa.me/79142663218" class="btn btn-whatsapp" target="_blank">
+                                    <i class="ph-fill ph-whatsapp-logo"></i>
+                                    Написать в WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-secondary calc-restart">Начать заново</button>
+                    </div>
+                </div>
+                
+                <!-- Progress -->
+                <div class="calc-progress">
+                    <div class="calc-progress-bar" id="calcProgress"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta">
         <div class="container">
@@ -727,7 +1293,7 @@
     </footer>
 
     <script>
-        // Tab switching
+        // Tab switching for cars
         const tabBtns = document.querySelectorAll('.tab-btn');
         const japanCars = document.getElementById('japan-cars');
         const chinaCars = document.getElementById('china-cars');
@@ -745,6 +1311,158 @@
                     chinaCars.style.display = 'grid';
                 }
             });
+        });
+        
+        // Calculator Quiz
+        const calcState = {
+            step: 1,
+            country: null,
+            countryPrice: 1,
+            carType: null,
+            basePrice: 0,
+            year: 2021,
+            engine: null,
+            enginePrice: 1
+        };
+        
+        const labels = {
+            japan: 'Япония',
+            china: 'Китай',
+            suv: 'Внедорожник / Кроссовер',
+            sedan: 'Седан / Хэтчбек',
+            minivan: 'Минивэн / Универсал',
+            petrol: 'Бензин',
+            hybrid: 'Гибрид',
+            diesel: 'Дизель'
+        };
+        
+        const steps = document.querySelectorAll('.calc-step');
+        const progressBar = document.getElementById('calcProgress');
+        const yearRange = document.getElementById('yearRange');
+        const yearValue = document.getElementById('yearValue');
+        
+        function updateProgress() {
+            const progress = (calcState.step / 5) * 100;
+            progressBar.style.width = progress + '%';
+        }
+        
+        function showStep(stepNum) {
+            steps.forEach(step => step.classList.remove('active'));
+            document.querySelector(`.calc-step[data-step="${stepNum}"]`).classList.add('active');
+            calcState.step = stepNum;
+            updateProgress();
+        }
+        
+        // Step 1: Country
+        document.querySelectorAll('.calc-step[data-step="1"] .calc-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.calc-step[data-step="1"] .calc-option').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                calcState.country = btn.dataset.value;
+                calcState.countryPrice = parseFloat(btn.dataset.price);
+                setTimeout(() => showStep(2), 200);
+            });
+        });
+        
+        // Step 2: Car Type
+        document.querySelectorAll('.calc-step[data-step="2"] .calc-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.calc-step[data-step="2"] .calc-option').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                calcState.carType = btn.dataset.value;
+                calcState.basePrice = parseInt(btn.dataset.price);
+                setTimeout(() => showStep(3), 200);
+            });
+        });
+        
+        document.querySelector('.calc-step[data-step="2"] .calc-prev').addEventListener('click', () => {
+            showStep(1);
+        });
+        
+        // Step 3: Year
+        yearRange.addEventListener('input', () => {
+            calcState.year = parseInt(yearRange.value);
+            yearValue.textContent = calcState.year;
+        });
+        
+        document.querySelector('.calc-step[data-step="3"] .calc-prev').addEventListener('click', () => {
+            showStep(2);
+        });
+        
+        document.querySelector('.calc-step[data-step="3"] .calc-next').addEventListener('click', () => {
+            showStep(4);
+        });
+        
+        // Step 4: Engine
+        document.querySelectorAll('.calc-step[data-step="4"] .calc-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.calc-step[data-step="4"] .calc-option').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                calcState.engine = btn.dataset.value;
+                calcState.enginePrice = parseFloat(btn.dataset.price);
+                calculateResult();
+                setTimeout(() => showStep(5), 200);
+            });
+        });
+        
+        document.querySelector('.calc-step[data-step="4"] .calc-prev').addEventListener('click', () => {
+            showStep(3);
+        });
+        
+        // Calculate result
+        function calculateResult() {
+            // Year factor: newer = more expensive
+            const yearFactor = 1 + (calcState.year - 2018) * 0.05;
+            
+            const totalPrice = Math.round(calcState.basePrice * calcState.countryPrice * calcState.enginePrice * yearFactor);
+            
+            document.getElementById('resultPrice').textContent = totalPrice.toLocaleString('ru-RU');
+            document.getElementById('resultCountry').textContent = labels[calcState.country];
+            document.getElementById('resultClass').textContent = labels[calcState.carType];
+            document.getElementById('resultYear').textContent = calcState.year + ' г.';
+            document.getElementById('resultEngine').textContent = labels[calcState.engine];
+            
+            // Prepare data for form
+            const calcData = {
+                страна: labels[calcState.country],
+                класс: labels[calcState.carType],
+                год: calcState.year,
+                двигатель: labels[calcState.engine],
+                цена: totalPrice.toLocaleString('ru-RU') + ' ₽'
+            };
+            document.getElementById('calcData').value = JSON.stringify(calcData);
+        }
+        
+        // Restart calculator
+        document.querySelector('.calc-restart').addEventListener('click', () => {
+            calcState.step = 1;
+            calcState.country = null;
+            calcState.countryPrice = 1;
+            calcState.carType = null;
+            calcState.basePrice = 0;
+            calcState.year = 2021;
+            calcState.engine = null;
+            calcState.enginePrice = 1;
+            
+            yearRange.value = 2021;
+            yearValue.textContent = '2021';
+            
+            document.querySelectorAll('.calc-option').forEach(b => b.classList.remove('selected'));
+            
+            showStep(1);
+        });
+        
+        // Lead form submit
+        document.getElementById('leadForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            // Here you can send data to server or Telegram
+            alert('Заявка отправлена! Мы перезвоним вам в течение 30 минут.');
+            
+            // Reset
+            e.target.reset();
         });
     </script>
 </body>
