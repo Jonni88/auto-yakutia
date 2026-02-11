@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авто из Японии и Китая под ключ в Якутии | Доставка во Владивосток</title>
+    <meta name="description" content="Покупка и доставка автомобилей из Японии и Китая под ключ в Якутию. Полный привод, надежность, доставка от 14 дней.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        :root {
+            --color-primary: #1a1a2e;
+            --color-accent: #e94560;
+            --color-gold: #ffd700;
+            --color-text: #333;
+            --color-bg: #f8f9fa;
+            --shadow: 0 4px 20px rgba(0,0,0,0.15);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.7;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 0;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo i {
+            font-size: 32px;
+            color: var(--color-gold);
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .nav-contacts {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .phone-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            transform: scale(1.1);
+            background: var(--color-gold);
+        }
+        
+        /* Hero with Video */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26,26,46,0.85) 0%, rgba(26,26,46,0.7) 100%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            padding: 140px 0 80px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(18px, 2.5vw, 24px);
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+        }
+        
+        .hero-feature i {
+            font-size: 28px;
+            color: var(--color-gold);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background: var(--color-accent);
+            color: white;
+            box-shadow: 0 4px 20px rgba(233, 69, 96, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(233, 69, 96, 0.5);
+        }
+        
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+        
+        /* Benefits */
+        .benefits {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 16px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: var(--color-bg);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+        
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        
+        .benefit-icon i {
+            font-size: 32px;
+            color: var(--color-gold);
+        }
+        
+        .benefit-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        /* Stats */
+        .stats {
+            padding: 60px 0;
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--color-gold);
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* Cars Catalog */
+        .cars {
+            padding: 80px 0;
+            background: var(--color-bg);
+        }
+        
+        .cars-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 14px 32px;
+            background: white;
+            border: 2px solid var(--color-primary);
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .tab-btn.active {
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .cars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .car-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .car-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .car-image {
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .car-info {
+            padding: 24px;
+        }
+        
+        .car-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .car-specs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .car-price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--color-accent);
+        }
+        
+        /* CTA */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #16213e 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 20px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0f0f1e;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-contacts {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer a {
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero-features {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-contacts {
+                display: none;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">
+                    <i class="ph-fill ph-car"></i>
+                    <span class="logo-text">Авто из Азии</span>
+                </a>
+                
+                <div class="nav-contacts">
+                    <a href="tel:+79142663218" class="phone-link">
+                        <i class="ph-fill ph-phone"></i>
+                        +7 (914) 266-32-18
+                    </a>
+                    
+                    <div class="social-links">
+                        <a href="https://t.me/+79142663218" target="_blank" title="Telegram">
+                            <i class="ph-fill ph-telegram-logo"></i>
+                        </a>
+                        <a href="https://wa.me/79142663218" target="_blank" title="WhatsApp">
+                            <i class="ph-fill ph-whatsapp-logo"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero with Video -->
+    <section class="hero">
+        <!-- ЗАМЕНИТЕ src на путь к вашему видео -->
+        <video class="hero-video" autoplay muted loop playsinline poster="">
+            <source src="video/hero-video.mp4" type="video/mp4">
+            <!-- Резервный фон если видео не загрузилось -->
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);"></div>
+        </video>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1>Покупка и доставка автомобилей из Японии и Китая под ключ</h1>
+                <p class="hero-subtitle">В Якутию во Владивостоке — на 30% дешевле рынка, доставка от 14 дней</p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="ph-fill ph-check-circle"></i>
+                        <span>Доставка под ключ</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="ph-fill ph-check-circle"></i>
+                        <span>Честный договор</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="ph-fill ph-check-circle"></i>
+                        <span>Полный привод для Якутии</span>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://wa.me/79142663218?text=Здравствуйте! Хочу заказать автомобиль" class="btn btn-primary" target="_blank">
+                        <i class="ph-fill ph-whatsapp-logo"></i>
+                        Получить расчёт стоимости
+                    </a>
+                    <a href="https://t.me/+79142663218" class="btn btn-whatsapp" target="_blank">
+                        <i class="ph-fill ph-telegram-logo"></i>
+                        Написать в Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Почему выбирают нас</h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="ph-fill ph-key"></i>
+                    </div>
+                    <h3>Доставка под ключ</h3>
+                    <p>Поможем с оплатой за границей, застрахуем авто, доставим и оформим все документы</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="ph-fill ph-file-text"></i>
+                    </div>
+                    <h3>Честный договор</h3>
+                    <p>Прозрачная схема оплаты без скрытых платежей. Вы будете знать за что платите</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="ph-fill ph-clock"></i>
+                    </div>
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставка от 14 дней. Отслеживание на каждом этапе</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="ph-fill ph-snowflake"></i>
+                    </div>
+                    <h3>Для Якутского климата</h3>
+                    <p>Подбираем только полноприводные авто, проверенные для суровых зим</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Доставленных авто</div>
+                </div>
+                <div>
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Лет на рынке</div>
+                </div>
+                <div>
+                    <div class="stat-number">83%</div>
+                    <div class="stat-label">Клиентов по рекомендации</div>
+                </div>
+                <div>
+                    <div class="stat-number">30%</div>
+                    <div class="stat-label">Экономия по сравнению с рынком РФ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Catalog -->
+    <section class="cars" id="cars">
+        <div class="container">
+            <div class="section-header">
+                <h2>Популярные автомобили</h2>
+            </div>
+            
+            <div class="cars-tabs">
+                <button class="tab-btn active" data-tab="japan">Из Японии</button>
+                <button class="tab-btn" data-tab="china">Из Китая</button>
+            </div>
+            
+            <!-- Japan Cars -->
+            <div class="cars-grid" id="japan-cars">
+                <div class="car-card">
+                    <div class="car-image">[Фото Toyota Land Cruiser Prado]</div>
+                    <div class="car-info">
+                        <h3 class="car-title">Toyota Land Cruiser Prado</h3>
+                        <div class="car-specs">
+                            <span><i class="ph-fill ph-calendar"></i> 2018-2022</span>
+                            <span><i class="ph-fill ph-gas-pump"></i> 2.7 - 4.0 л</span>
+                            <span><i class="ph-fill ph-gear"></i> Автомат</span>
+                            <span><i class="ph-fill ph-car"></i> Полный привод</span>
+                        </div>
+                        <div class="car-price">от 2 800 000 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">[Фото Toyota Harrier]</div>
+                    <div class="car-info">
+                        <h3 class="car-title">Toyota Harrier</h3>
+                        <div class="car-specs">
+                            <span><i class="ph-fill ph-calendar"></i> 2020-2023</span>
+                            <span><i class="ph-fill ph-gas-pump"></i> 2.0 л</span>
+                            <span><i class="ph-fill ph-gear"></i> Вариатор</span>
+                            <span><i class="ph-fill ph-car"></i> Полный привод</span>
+                        </div>
+                        <div class="car-price">от 2 100 000 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">[Фото Honda CR-V]</div>
+                    <div class="car-info">
+                        <h3 class="car-title">Honda CR-V</h3>
+                        <div class="car-specs">
+                            <span><i class="ph-fill ph-calendar"></i> 2019-2022</span>
+                            <span><i class="ph-fill ph-gas-pump"></i> 1.5 л Turbo</span>
+                            <span><i class="ph-fill ph-gear"></i> Вариатор</span>
+                            <span><i class="ph-fill ph-car"></i> Полный привод</span>
+                        </div>
+                        <div class="car-price">от 1 950 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- China Cars (hidden by default) -->
+            <div class="cars-grid" id="china-cars" style="display: none;">
+                <div class="car-card">
+                    <div class="car-image">[Фото Tank 300]</div>
+                    <div class="car-info">
+                        <h3 class="car-title">Tank 300</h3>
+                        <div class="car-specs">
+                            <span><i class="ph-fill ph-calendar"></i> 2023-2024</span>
+                            <span><i class="ph-fill ph-gas-pump"></i> 2.0 л Turbo</span>
+                            <span><i class="ph-fill ph-gear"></i> Автомат</span>
+                            <span><i class="ph-fill ph-car"></i> Полный привод</span>
+                        </div>
+                        <div class="car-price">от 3 200 000 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">[Фото Omoda C5]</div>
+                    <div class="car-info">
+                        <h3 class="car-title">Omoda C5</h3>
+                        <div class="car-specs">
+                            <span><i class="ph-fill ph-calendar"></i> 2023-2024</span>
+                            <span><i class="ph-fill ph-gas-pump"></i> 1.5 л Turbo</span>
+                            <span><i class="ph-fill ph-gear"></i> Вариатор</span>
+                            <span><i class="ph-fill ph-car"></i> Полный привод</span>
+                        </div>
+                        <div class="car-price">от 2 300 000 ₽</div>
+                    </div>
+                </div>
+                
+                <div class="car-card">
+                    <div class="car-image">[Фото Geely Tugella]</div>
+                    <div class="car-info">
+                        <h3 class="car-title">Geely Tugella</h3>
+                        <div class="car-specs">
+                            <span><i class="ph-fill ph-calendar"></i> 2022-2024</span>
+                            <span><i class="ph-fill ph-gas-pump"></i> 2.0 л Turbo</span>
+                            <span><i class="ph-fill ph-gear"></i> Робот</span>
+                            <span><i class="ph-fill ph-car"></i> Полный привод</span>
+                        </div>
+                        <div class="car-price">от 2 600 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Получите расчёт стоимости авто прямо сейчас</h2>
+            <p>Рассчитаем стоимость автомобиля в 3-х ценовых вариантах под ваш бюджет</p>
+            
+            <div class="cta-buttons">
+                <a href="https://wa.me/79142663218?text=Здравствуйте! Хочу получить расчёт стоимости автомобиля" class="btn btn-primary" target="_blank">
+                    <i class="ph-fill ph-whatsapp-logo"></i>
+                    Написать в WhatsApp
+                </a>
+                <a href="https://t.me/+79142663218" class="btn btn-whatsapp" target="_blank">
+                    <i class="ph-fill ph-telegram-logo"></i>
+                    Написать в Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-contacts">
+                <a href="tel:+79142663218">+7 (914) 266-32-18</a>
+                <a href="https://wa.me/79142663218" target="_blank">WhatsApp</a>
+                <a href="https://t.me/+79142663218" target="_blank">Telegram</a>
+            </div>
+            <p>Якутия • Доставка автомобилей из Японии и Китая</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const japanCars = document.getElementById('japan-cars');
+        const chinaCars = document.getElementById('china-cars');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                if (btn.dataset.tab === 'japan') {
+                    japanCars.style.display = 'grid';
+                    chinaCars.style.display = 'none';
+                } else {
+                    japanCars.style.display = 'none';
+                    chinaCars.style.display = 'grid';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
